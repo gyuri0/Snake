@@ -1,4 +1,4 @@
-package game;
+package math;
 
 import static org.junit.Assert.*;
 
@@ -6,19 +6,22 @@ import math.Vector2D;
 
 import org.junit.Test;
 
-public class testVector2D {
+public class TestVector2D {
 	
 	@Test
 	public void testAdd(){
 		Vector2D a;
 		Vector2D b;
-		a= new Vector2D(-5,5);
-		b= new Vector2D(6,-3);
-		assertEquals(new Vector2D(1,2),a.add(b));
 		
 		a= new Vector2D(0.5,-6.135);
 		b= new Vector2D(100,-100);
 		assertEquals(new Vector2D(100.5,-106.135),a.add(b));
+		
+		a= new Vector2D(-5,5);
+		b= new Vector2D(6,-3);
+		assertEquals(new Vector2D(1,2),a.add(b));
+		
+		
 	}
 	
 	@Test

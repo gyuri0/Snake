@@ -8,7 +8,7 @@ import math.Vector2D;
 
 import org.junit.Test;
 
-public class testSnake {
+public class TestSnake {
 
 	@Test
 	public void testTurnAndMove() {

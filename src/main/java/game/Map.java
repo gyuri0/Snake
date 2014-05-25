@@ -154,7 +154,7 @@ public class Map {
 	 * Az ezen a pályán lévő élő {@link Snake} objektumok számát határozza meg.
 	 * @return az élő {@link Snake} objektumok száma
 	 */
-	private int numberOfLiveSnake(){
+	public int numberOfLiveSnake(){
 		int count=0;
 		for(Snake s : snakes){
 			if(s.isLive())
@@ -167,7 +167,7 @@ public class Map {
 	 * Meghatározza, hogy vége van-e a játéknak.
 	 * @return true, ha a játéknak vége, false, ha nincs.
 	 */
-	private boolean isEnd(){
+	public boolean isEnd(){
 		if (numberOfLiveSnake()<2)
 			return true;
 		else

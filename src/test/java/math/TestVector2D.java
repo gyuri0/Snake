@@ -9,6 +9,48 @@ import org.junit.Test;
 public class TestVector2D {
 	
 	@Test
+	public void testEquals(){
+		Vector2D a=new Vector2D(7.83,-9.4);
+		Vector2D b=new Vector2D(7.83,-9.4);
+		
+		assertTrue(a.equals(a));
+		assertTrue(a.equals(b));
+		assertTrue(b.equals(a));
+		
+		b.setY(-9.39);
+		assertFalse(a.equals(b));
+		assertFalse(a.equals(null));
+		assertFalse(a.equals(new Double(7.83)));
+		
+		b.setY(-9.3999999999);
+		assertTrue(a.equals(b));
+	    
+		b.setX(5);
+		b.setY(-9.4);
+		assertFalse(a.equals(b));
+	}
+	
+	@Test
+	public void testVector2DVector2D(){
+		Vector2D a=new Vector2D(7.83,-9.4);
+		Vector2D b=new Vector2D(a);
+		
+		assertEquals(a,b);
+	}
+	
+	@Test
+	public void testGettersAndSetters(){
+		Vector2D a=new Vector2D(0,0);
+		
+		a.setX(6.23);
+		a.setY(-7.97);
+
+		assertEquals(6.23,a.getX(),0.00001);
+		assertEquals(-7.97,a.getY(),0.00001);
+		
+	}
+	
+	@Test
 	public void testAdd(){
 		Vector2D a;
 		Vector2D b;
@@ -61,5 +103,14 @@ public class TestVector2D {
 		
 		a=new Vector2D(0,1);
 		assertEquals(new Vector2D(1,0),a.rotate(-90));
+	}
+	
+	@Test
+	public void tostToString(){
+		Vector2D a=new Vector2D(7.83,-9.4);
+		Vector2D b=new Vector2D(0,0);
+		
+		assertEquals("(7.83,-9.4)", a.toString());
+		assertEquals("(0.0,0.0)", b.toString());
 	}
 }

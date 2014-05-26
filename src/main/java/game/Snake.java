@@ -9,9 +9,12 @@ import math.Vector2D;
 
 
 /**
- * Osztály egy játékbeli kígyó reprezentálásához
+ * Osztály egy játékbeli kígyó reprezentálásához.
  */
 public class Snake {
+	/**
+	 * Az osztály loggere.
+	 */
 	private static Logger logger = LoggerFactory.getLogger(Snake.class);
 	
 	/**
@@ -78,7 +81,7 @@ public class Snake {
 	
 	/**
 	 * Beállítja az aktuális kígyó vastagságát.
-	 * @return az aktuális kígyó vastagsága
+	 * @param thickness az aktuális kígyó vastagsága
 	 */
 	public void setThickness(int thickness) {
 		this.thickness=thickness;
@@ -143,7 +146,7 @@ public class Snake {
 
 	/**
 	 * Beállítja az aktuális kígyó fordulási szándékát.
-	 * @return az aktuális kígyó fordulási szándéka
+	 * @param move az aktuális kígyó fordulási szándéka
 	 */
 	public void setMove(Move move) {
 		this.move = move;
@@ -159,7 +162,7 @@ public class Snake {
 
 	/**
 	 * Beállítja az aktuális kígyó színét.
-	 * @return az aktuális kígyó színe
+	 * @param color az aktuális kígyó színe
 	 */
 	public void setColor(Color color) {
 		this.color = color;

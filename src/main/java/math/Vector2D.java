@@ -18,7 +18,7 @@ public class Vector2D {
 	private double y;
 	
 	/**
-	 * Létrehoz egy új {@code Vector2D} objektumot
+	 * Létrehoz egy új {@code Vector2D} objektumot.
 	 * @param x a vektor x koordinátája
 	 * @param y a vektor y koordinátája
 	 */
@@ -63,7 +63,7 @@ public class Vector2D {
 	
 	/**
 	* Beállítja az aktuális vektor y koordinátáját.
-	* @param x az aktuális vektor y koordinátája
+	* @param y az aktuális vektor y koordinátája
 	*/
 	public void setY(double y) {
 		this.y = y;
@@ -90,7 +90,7 @@ public class Vector2D {
 	/**
 	 * Visszaad egy új {@code Vector2D} objektumot, mely az aktuális vektor {@code degree} fokkal történő elforgatásából adódik.
 	 * Az elforgatás az origó körül történik.
-	 * @param degree
+	 * @param degree a forgatás szöge fokban
 	 * @return az aktuális vektor {@code degree} szöggel történő elforgatásából adódó vektor
 	 */
 	public Vector2D rotate(double degree){
@@ -113,6 +113,7 @@ public class Vector2D {
 	
 	/**
 	 * Visszaadja az aktuális vektorból készített {@link String} objektumot.
+	 * @return Az aktuális vektorból készített {@link String} objektum
 	 */
 	@Override
 	public String toString() {

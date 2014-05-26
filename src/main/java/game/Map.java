@@ -16,6 +16,9 @@ import math.Vector2D;
  * Osztály egy játékbeli pálya (játékállapot) reprezentálásához.
  */
 public class Map {
+	/**
+	 * Az osztály loggere.
+	 */
 	private static Logger	logger = LoggerFactory.getLogger(Map.class);
 	
 	/**
@@ -130,7 +133,7 @@ public class Map {
 	 * 
 	 * @param s az a {@link Snake} objektum melynek az érvényességét vizsgáljuk
 	 * @param previousPosition a {@link Snake} objektum előző poziciója
-	 * @return
+	 * @return az ütközés igazságértéke
 	 */
 	private boolean collision(Snake s,Vector2D previousPosition){
 		Vector2D center = s.getPos();

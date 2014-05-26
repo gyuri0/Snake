@@ -11,7 +11,7 @@ public class Circle {
 	 * @param center a kör középpontja
 	 * @param x a vizsgálandó pont x koordinátája
 	 * @param y a vizsgálandó pont y koordinátája
-	 * @return
+	 * @return true, ha a pont a körön belül van, egyébként false
 	 */
 	public static boolean isInnerPoint(double r,Vector2D center, double x,double y){
 		//(x - center_x)^2 + (y - center_y)^2 < radius^2
@@ -26,7 +26,7 @@ public class Circle {
 	 * @param r a kör sugara
 	 * @param center a kör középpontja
 	 * @param point a vizsgálandó pont
-	 * @return
+	 * @return true, ha a pont a körön belül van, egyébként false
 	 */
 	public static boolean isInnerPoint(double r,Vector2D center, Vector2D point){
 		if (isInnerPoint(r, center, point.getX(), point.getY()))

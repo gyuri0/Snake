@@ -58,7 +58,18 @@ public class GameFromXml extends JFrame {
 				
 			}
 		});
+		
+		JButton btnBack = new JButton("Back");
+		btnBack.setBounds(200, 300, 200, 50);
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				MenuFrame menu = new MenuFrame();
+				menu.setVisible(true);
+				GameFromXml.this.dispose();
+			}
+		});
 		contentPane.add(btnNewGame);
+		contentPane.add(btnBack);
 		
 	}
 

@@ -177,14 +177,5 @@ public class Map {
 			return false;
 	}
 	
-	/**
-	 * Egy előre definiált {@code Map} objektumot ad vissza két {@link Snake} objektummal.
-	 * @return az előre definiált {@code Map} objektum
-	 */
-	public static Map getDefaultMap(){
-		Map map = new Map(600, 600);
-    	map.getSnakes().add(new Snake(new Vector2D(100,200), new Vector2D(100,0),5,90,Color.WHITE));
-        map.getSnakes().add(new Snake(new Vector2D(500,400), new Vector2D(-100,0),5,90,Color.GREEN));
-		return map;
-	}
+	
 }

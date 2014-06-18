@@ -11,6 +11,13 @@ import org.junit.Test;
 
 public class TestMap {
 
+	public Map getDefaultMap(){
+		Map map = new Map(600, 600);
+    	map.getSnakes().add(new Snake(new Vector2D(100,200), new Vector2D(100,0),5,90,Color.WHITE));
+        map.getSnakes().add(new Snake(new Vector2D(500,400), new Vector2D(-100,0),5,90,Color.GREEN));
+		return map;
+	}
+	
 	@Test
 	public void testGetters() {
 		Map map= new Map(600,700);
@@ -36,7 +43,7 @@ public class TestMap {
 	
 	@Test
 	public void testIsEnd() {
-		Map map=Map.getDefaultMap();
+		Map map=getDefaultMap();
 		assertFalse(map.isEnd());
 		map.getSnakes().get(0).setLive(false);
 		assertTrue(map.isEnd());
@@ -44,12 +51,12 @@ public class TestMap {
 	
 	@Test
 	public void testUpdate() {
-		Map map=Map.getDefaultMap();
+		Map map=getDefaultMap();
 		map.getSnakes().get(1).setLive(false);
 		map.update(1000);
 		Snake s1=map.getSnakes().get(0);
 		Snake s2=map.getSnakes().get(1);
-		map=Map.getDefaultMap();
+		map=getDefaultMap();
 		Snake s3=map.getSnakes().get(0);
 		Snake s4=map.getSnakes().get(1);
 		s3.turnAndMove(1000);
@@ -57,7 +64,7 @@ public class TestMap {
 		assertEquals(s1.getPos(),s3.getPos());
 		assertEquals(s2.getPos(),s4.getPos());
 		
-		map=Map.getDefaultMap();
+		map=getDefaultMap();
 		s1=map.getSnakes().get(0);
 		
 		s1.setPos(new Vector2D(800,500));

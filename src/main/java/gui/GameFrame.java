@@ -22,9 +22,6 @@ public class GameFrame extends JFrame {
 	     GamePanel mypanel = new GamePanel(map);
 	     this.add(mypanel);
 	}
-	public GameFrame(){
-		this(Map.getDefaultMap());
-	}
 	
 	class GamePanel extends JPanel{
 		Map map;

@@ -138,7 +138,7 @@ public class Map {
 	private boolean collision(Snake s,Vector2D previousPosition){
 		Vector2D center = s.getPos();
 		double r=s.getThickness();
-		if(center.getX()<r || center.getX()+r>width || center.getY()<r || center.getY()+r>height)
+		if(center.getX()<=r || center.getX()+r>=width || center.getY()<=r || center.getY()+r>=height)
 			return true;
 		
 		
